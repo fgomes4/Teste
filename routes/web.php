@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\InscricaoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/inscricao', function () {
-    return "inscricao";
-});
+Route::get('/inscricao', [InscricaoController::class, 'inde']);
+Route::post('/incricao', [InscricaoController::class, 'store']);

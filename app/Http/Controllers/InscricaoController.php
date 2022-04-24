@@ -10,8 +10,13 @@ use App\Models\Inscricao;
 
 class InscricaoController extends Controller
 {
+    
     public function __construct(){}
-
+    public function inde()
+    {
+        
+        return view('inscricao.index');
+    }
     public function store(Request $request)
     {
         $this->validate(
