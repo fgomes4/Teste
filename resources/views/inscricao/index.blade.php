@@ -55,7 +55,7 @@
               </div>
             </div>
             </form>
-            <a class="waves-effect waves-light btn-large right">Button</a>
+            <a type="submit" class="waves-effect waves-light btn-large right">Button</a>
         </div>
 
     <script>
