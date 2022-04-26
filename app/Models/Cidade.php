@@ -16,7 +16,9 @@ class Cidade extends Model
 	    'estado_id',
 	    'nome'
 	];
-
+    public function cidade(){
+        return $this->belongsTo('App\Models\Estado');
+    }
     public static function createCidade(Cidade $cidade){
     	return $cidade->save();
     }

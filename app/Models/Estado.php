@@ -17,6 +17,11 @@ class Estado extends Model
         'sigla'
 	];
 
+    public function estado()
+    {
+        return $this->hasMany('App\Models\Cidade');
+    }
+
     public static function createEstado(Estado $estado){
     	return $estado->save();
     }

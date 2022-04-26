@@ -30,21 +30,21 @@
               </div>
 
               <div class="input-field col s3">
-                <select>
-                  <option value="" disabled selected>Choose</option>
-                  <option value="1">Option 1</option>
-                  <option value="2">Option 2</option>
-                  <option value="3">Option 3</option>
+                <select name="id">
+                  <option value="" disabled selected>Selecione</option>
+                 @foreach ($data as $row)
+                <option value="{{$row->estado_id}}">{{$row->sigla}}</option>    
+                @endforeach
                 </select>
                 <label>Estado</label>
               </div>
 
               <div class="input-field col s3">
                 <select>
-                  <option value="" disabled selected>Choose</option>
-                  <option value="1">Option 1</option>
-                  <option value="2">Option 2</option>
-                  <option value="3">Option 3</option>
+                  <option value="" disabled selected>Selecione</option>
+                  @foreach ($data as $row)
+                  <option value="{{$row->cidade_id}}">{{$row->nome}}</option>    
+                  @endforeach
                 </select>
                 <label>Cidade</label>
               </div>

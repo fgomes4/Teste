@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InscricaoController;
+use App\Http\Controllers\EstadoController;
+use App\Http\Controllers\CidadeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +21,6 @@ Route::get('/', function () {
 });
 
 Route::get('/inscricao', [InscricaoController::class, 'inde']);
-Route::post('/incricao', [InscricaoController::class, 'store']);
+Route::post('/incricao', [InscricaoController::class, 'stored']);
+Route::get('/inscricao', [EstadoController::class, 'index']);
+Route::get('/inscricao', [CidadeController::class, 'index']);
